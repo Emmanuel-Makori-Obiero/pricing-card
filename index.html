@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Card</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #f3f4f6;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .pricing {
+        width: 320px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow:
+          0 10px 25px -5px rgba(0, 0, 0, 0.05),
+          0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        text-align: left;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .pricing:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1f2937;
+        margin: 0 0 8px 0;
+      }
+
+      .price {
+        font-size: 28px;
+        font-weight: 800;
+        color: #059669;
+        margin: 0 0 24px 0;
+      }
+
+      .features {
+        list-style: none;
+        padding-left: 0;
+        margin: 0 0 28px 0;
+      }
+
+      .features li {
+        font-size: 15px;
+        color: #4b5563;
+        padding: 12px 0;
+        border-bottom: 1px solid #f3f4f6;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Subtly differentiate the final row list item */
+      .features li:last-child {
+        border-bottom: none;
+      }
+
+      .btn {
+        width: 100%;
+        background: #2563eb;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition:
+          background-color 0.2s ease,
+          transform 0.1s ease;
+      }
+
+      .btn:hover {
+        background: #1d4ed8;
+      }
+
+      .btn:active {
+        transform: scale(0.98);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pricing">
+      <h2 class="title">Basic Plan</h2>
+      <p class="price">
+        $9.99<span style="font-size: 14px; font-weight: 400; color: #6b7280">
+          / month</span
+        >
+      </p>
+
+      <ul class="features">
+        <li>1 GB Storage</li>
+        <li>Basic Support</li>
+        <li>All Core Features</li>
+      </ul>
+
+      <button class="btn" type="button">Start Trial</button>
+    </div>
+    <!-- Fixed the </motion> bug here -->
+  </body>
+</html>
